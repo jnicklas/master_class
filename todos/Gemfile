@@ -33,4 +33,5 @@ gem 'jquery-rails'
 group :test do
   gem 'rspec-rails'
   gem 'capybara', :require => 'capybara/rspec'
+  gem 'database_cleaner'
 end
