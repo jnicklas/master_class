@@ -7,3 +7,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  $('form.edit_todo select').change(function() {
+    this.form.submit();
+  });
+  $('form.edit_todo input[type=submit]').hide();
+});
