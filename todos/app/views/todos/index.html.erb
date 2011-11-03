@@ -10,6 +10,18 @@
 
 <ul>
   <% @todos.each do |todo| %>
-    <li class="task"><%= todo.description %></li>
+    <li class="task">
+      <h3><%= todo.description %></h3>
+
+      <% if todo.assigned.present? %>
+        <p>Assigned to <%= todo.assigned %></p>
+      <% end %>
+
+      <%= form_for todo do |form| %>
+        <%= form.label :assigned %><br/>
+        <%= form.select :assigned, ['', 'Jonas', 'Jimmy', 'Kim CJ'] %>
+        <%= form.submit 'Assign' %><br/>
+      <% end %>
+    </li>
   <% end %>
 </ul>
