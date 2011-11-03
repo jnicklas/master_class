@@ -119,18 +119,131 @@
 
 # Use JavaScript!
 
-!SLIDE
+!SLIDE code small
 
     @@@ ruby
     feature 'Assigning todo item' do
       scenario 'assigning a todo item to a user', :js => true do
         visit('/todos')
-        fill_in('Description', :with => 'Walk the dog')
+        fill_in('Description', :with => 'Buy milk')
         click_button('Create')
 
-        within('.task', :text => 'Walk the dog') do
+        within('.task', :text => 'Buy milk') do
           select('Jonas', :from => 'Assigned')
           page.should have_content('Assigned to Jonas')
         end
       end
     end
+
+!SLIDE
+
+# Hold on!
+
+!SLIDE
+
+## This is gonna get really slow!
+# let's find a better way
+
+!SLIDE code small
+
+## Add this scenario and run it!
+
+    @@@ ruby
+    scenario 'assigning a todo item to a user', :js => true do
+      Todo.create(:description => 'Herd sheep')
+      visit('/todos')
+
+      within('.task', :text => 'Herd sheep') do
+        select('Jonas', :from => 'Assigned')
+        page.should have_content('Assigned to Jonas')
+      end
+    end
+
+!SLIDE
+
+# Oh no! What's happening?
+
+!SLIDE
+
+# Transactional features
+## Every scenario/it block
+## is run in a transaction
+
+!SLIDE
+
+# Invisible!
+## outside the transaction
+
+!SLIDE
+
+# How come
+## we are outside the transaction?
+
+!SLIDE
+
+# Rails
+## One thread
+# Capybara
+## Another
+
+!SLIDE
+
+# DB connections
+## are not threadsafe
+
+!SLIDE
+
+## One connection
+# per thread
+
+!SLIDE
+
+# Solutions
+
+* Force same db connection
+* Truncate database instead of transactions
+
+!SLIDE
+
+# Truncation!
+
+## Add DatabaseCleaner gem:
+
+    @@@ruby
+    group :test do
+      gem 'rspec-rails'
+      gem 'capybara', :require => 'capybara/rspec'
+      gem 'database_cleaner'
+    end
+
+!SLIDE
+
+## Disable transactional fixtures:
+
+    @@@ruby
+    config.use_transactional_fixtures = false
+
+## Require Database cleaner and configure:
+
+    @@@ruby
+    DatabaseCleaner.strategy = :truncation
+
+## Hook into RSpec:
+
+    @@@ruby
+    config.before { DatabaseCleaner.start }
+    config.after { DatabaseCleaner.clean }
+
+!SLIDE
+
+# Run it again!
+
+!SLIDE
+
+# We're done!
+
+!SLIDE
+
+# Learn the Capybara API!
+## It's quite small
+## https://github.com/jnicklas/capybara
