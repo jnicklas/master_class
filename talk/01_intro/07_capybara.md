@@ -50,6 +50,61 @@
 
     mkdir spec/requests
 
-## Create a new spec file with your favorite editor (vim, of course!):
+## Create a new spec file
+## with your favourite editor:
 
-    vi spec/requests/create_todo_item_spec.rb
+    vim spec/requests/create_todo_item_spec.rb
+
+!SLIDE code small
+
+## Add your first feature
+
+    @@@ ruby
+    require 'spec_helper'
+
+    feature 'Creating todo item' do
+      scenario 'successfully creating a todo item' do
+        visit('/todos')
+        fill_in('Description', :with => 'Walk the dog')
+        click_button('Create')
+        page.should have_selector('.task', :text => 'Walk the dog')
+      end
+    end
+
+!SLIDE countdown
+
+** 10 **
+
+!SLIDE
+
+# Add some JavaScript
+
+!SLIDE
+
+# Grab the example app
+
+    git clone git://github.com/jnicklas/master_class.git
+    cd master_class/todos
+    bundle
+    bundle exec rspec spec
+
+!SLIDE code small
+
+# New feature
+
+    @@@ ruby
+    require 'spec_helper'
+
+    feature 'Assigning todo item' do
+      scenario 'assigning a todo item to a user' do
+        visit('/todos')
+        fill_in('Description', :with => 'Walk the dog')
+        click_button('Create')
+
+        within('.task', :text => 'Walk the dog') do
+          select('Jonas', :from => 'Assigned')
+          click_button('Assign')
+          page.should have_content('Assigned to Jonas')
+        end
+      end
+    end

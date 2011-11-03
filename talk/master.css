@@ -24,6 +24,10 @@ body {
 .slide h2 {
   font-size: 64px;
 }
+.slide p {
+  margin: 0 120px;
+  text-align: left;
+}
 .slide h3, .slide h4 {
   font-size: 36px;
   font-weight: normal;
@@ -141,3 +145,21 @@ body {
 .slide.code.small pre {
   font-size: 18px;
 }
+
+.slide.countdown strong {
+  display: inline-block;
+  background: #333;
+  border: 8px solid white;
+  -webkit-border-radius: 10px;
+  color: white;
+  padding: 10px;
+  font-family: 'Monaco' !important;
+  font-size: 200px;
+  margin: -100px 0 0;
+}
+
+.slide.countdown strong.done {
+  border-color: red;
+  color: red;
+}
+
