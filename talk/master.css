@@ -1,0 +1,143 @@
+body {
+  font-family: 'Akkurat', 'Helvetica', sans-serif;
+  color: white;
+}
+.slide h1, .slide h2 {
+  font-family: 'League Gothic', 'Helvetica Neue', sans-serif;
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 120%;
+  margin: 0 0 0 120px;
+  text-align: left;
+}
+.slide img {
+  display: block;
+  margin: 1em auto;
+  border: 1px solid black;
+  padding: 10px;
+  background: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.2)
+}
+
+.slide h2 {
+  font-size: 64px;
+}
+.slide h3, .slide h4 {
+  font-size: 36px;
+  font-weight: normal;
+}
+.slide ul {
+  margin: 0;
+  padding: 0;
+}
+.slide ul li {
+  font-size: 64px;
+  font-family: 'League Gothic', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0.2em 0 0.2em 120px;
+  list-style: outside;
+}
+
+.slide a:link, .slide a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.slide a:hover, .slide a:active {
+  text-decoration: underline;
+}
+
+.slide {
+  background: url('green.png') center no-repeat;
+}
+.slide.start {
+  background: url('start.png') center no-repeat;
+}
+.slide.splash {
+  background: url('splash.png') center no-repeat;
+}
+.slide .splash h1 {
+  text-align: left;
+  padding-left: 50px;
+  margin: 20px 0;
+}
+
+.slide.purple {
+  background: url('purple.png') 0 0 no-repeat;
+}
+
+.slide.blue {
+  background: url('blue.png') 0 0 no-repeat;
+}
+.slide.capy1 {
+  background: url('capy1.jpg') 0 0 no-repeat;
+}
+.slide.capy2 {
+  background: url('capy2.jpg') 0 0 no-repeat;
+}
+.slide.capy3 {
+  background: url('capy3.jpg') 0 0 no-repeat;
+}
+.slide.capy4 {
+  background: url('capy4.jpg') 0 0 no-repeat;
+}
+.slide.capy5 {
+  background: url('capy5.jpg') 0 0 no-repeat;
+}
+.slide.capy6 {
+  background: url('capy6.jpg') 0 0 no-repeat;
+}
+.slide .splash h3 {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.slide .splash h4 {
+  text-align: left;
+  padding-left: 50px;
+  margin: 20px 0 0;
+}
+
+.slide .center img {
+  height: 90%;
+}
+
+.slide table {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.3)
+}
+
+.slide table td, .slide table th {
+  font-size: 32px;
+  text-align: left;
+  font-weight: normal;
+  padding: 10px 15px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.slide table th {
+  background: rgba(0, 0, 0, 0.3)
+}
+
+.slide pre, .slide pre.sh_sourceCode {
+  font-size: 24px;
+  line-height: 150%;
+  margin: 10px 120px 40px;
+  padding: 20px 20px;
+  font-family: 'Monaco';
+  background: #fff;
+  color: #000;
+  -webkit-border-radius: 5px;
+}
+.slide code, .slide pre.sh_sourceCode .sh_string {
+  font-family: 'Monaco' !important;
+}
+
+.slide.code.small pre {
+  font-size: 18px;
+}

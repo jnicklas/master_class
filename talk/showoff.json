@@ -1,0 +1,20 @@
+{
+  "name": "Full stack testing of your Ruby and JavaScript applications",
+  "sections": [
+    {
+      "section":"01_intro"
+    },
+    {
+      "section":"02_js_design"
+    },
+    {
+      "section":"03_js_testing"
+    },
+    {
+      "section":"04_integration_testing"
+    },
+    {
+      "section":"05_closing"
+    }
+  ]
+}
