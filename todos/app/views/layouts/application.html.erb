@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <div class="topbar" data-dropdown="dropdown">
+      <div class="topbar-inner">
+        <div class="container">
+          <h3><a href="/todos">Todos</a></h3>
+        </div>
+      </div><!-- /topbar-inner -->
+    </div>
+    <%= yield %>
+  </div>
 </body>
 </html>

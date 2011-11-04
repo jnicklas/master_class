@@ -1,10 +1,10 @@
-<%= form_for Todo.new do |form| %>
+<%= form_for Todo.new, :html => { :class => 'form-stacked' } do |form| %>
   <p>
-    <%= form.label :description %><br/>
+    <%= form.label :description %>
     <%= form.text_area :description, :rows => 3 %>
   </p>
-  <p>
-    <%= form.submit 'Create' %><br/>
+  <p class="actions">
+    <%= form.submit 'Create', :class => 'btn primary' %><br/>
   </p>
 <% end %>
 
