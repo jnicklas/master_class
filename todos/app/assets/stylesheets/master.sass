@@ -3,6 +3,7 @@ body
 
 ul
   li.task
+    overflow: hidden
     list-style: none
     border: 1px solid #ccc
     border-radius: 5px
@@ -18,10 +19,14 @@ ul
       label
         display: none
 
+    form.form-stacked
+      padding: 0
+      margin: 1em 0 0
+
     .edit
       position: absolute
       right: 10px
-      top: 10px
+      top: 5px
       color: #ffffff
       cursor: pointer
       display: inline-block
