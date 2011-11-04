@@ -6,8 +6,8 @@
 
 ## Generate a Rails app
 
-    rails new todos --skip-test-unit
-    cd todos
+    $ rails new todos --skip-test-unit
+    $ cd todos
 
 !SLIDE
 
@@ -23,22 +23,22 @@
 
 ## Bundle
 
-    bundle
+    $ bundle
 
 ## Generate RSpec
 
-    bundle exec rails generate rspec:install
+    $ bundle exec rails generate rspec:install
 
 !SLIDE
 
 ## Create a directory for specs:
 
-    mkdir spec/requests
+    $ mkdir spec/requests
 
 ## Create a new spec file
 ## with your favourite editor:
 
-    vim spec/requests/create_todo_item_spec.rb
+    $ vim spec/requests/create_todo_item_spec.rb
 
 !SLIDE code small
 

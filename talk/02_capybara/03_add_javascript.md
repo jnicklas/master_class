@@ -6,10 +6,10 @@
 
 # Grab the example app
 
-    git clone git://github.com/jnicklas/master_class.git
-    cd master_class/todos
-    bundle
-    bundle exec rspec spec
+    $ git clone git://github.com/jnicklas/master_class.git
+    $ cd master_class/todos
+    $ bundle
+    $ bundle exec rspec spec
 
 !SLIDE code small
 
