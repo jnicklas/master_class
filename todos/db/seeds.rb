@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Todo.create(:description => 'Take out the trash')
+Todo.create(:description => 'Pick up the kids')
+Todo.create(:description => 'Take over the world')
+Todo.create(:description => 'Buy sugar')
