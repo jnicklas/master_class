@@ -42,6 +42,7 @@ body {
   padding: 0;
   margin: 0.2em 0 0.2em 120px;
   list-style: outside;
+  text-align: left;
 }
 
 .slide a:link, .slide a:visited {
