@@ -1,27 +1,8 @@
-<%= form_for Todo.new, :html => { :class => 'form-stacked' } do |form| %>
-  <p>
-    <%= form.label :description %>
-    <%= form.text_area :description, :rows => 3 %>
-  </p>
-  <p class="actions">
-    <%= form.submit 'Create', :class => 'btn primary' %><br/>
-  </p>
-<% end %>
-
 <ul>
   <% @todos.each do |todo| %>
     <li class="task">
       <h3><%= todo.description %></h3>
-
-      <% if todo.assigned.present? %>
-        <p>Assigned to <%= todo.assigned %></p>
-      <% end %>
-
-      <%= form_for todo do |form| %>
-        <%= form.label :assigned %><br/>
-        <%= form.select :assigned, ['', 'Jonas', 'Jimmy', 'Kim', 'CJ'] %>
-        <%= form.submit 'Assign', :class => 'btn primary' %><br/>
-      <% end %>
+      <a href="#" class="edit">Edit</a>
     </li>
   <% end %>
 </ul>
