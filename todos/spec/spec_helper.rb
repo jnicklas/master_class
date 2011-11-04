@@ -9,6 +9,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 DatabaseCleaner.strategy = :truncation
 
+Capybara.server_boot_timeout = 30
+
 RSpec.configure do |config|
   # == Mock Framework
   #

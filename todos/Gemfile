@@ -35,3 +35,7 @@ group :test do
   gem 'capybara', :require => 'capybara/rspec'
   gem 'database_cleaner'
 end
+
+group :test, :development do
+  gem 'evergreen', '~>1.0', :require => 'evergreen/rails'
+end

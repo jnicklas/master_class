@@ -14,3 +14,5 @@ $(function() {
   });
   $('form.edit_todo input[type=submit]').hide();
 });
+
+$(function() { Todo.fetch() });
