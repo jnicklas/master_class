@@ -15,6 +15,15 @@
 
 !SLIDE
 
+# Switch seamlessly
+## between drivers
+
+* Selenium (remote control browser)
+* Webkit (headless)
+* RackTest (pure Ruby)
+
+!SLIDE
+
 # Let's do this
 
 !SLIDE
@@ -71,6 +80,10 @@
       end
     end
 
+!SLIDE
+
+# Why not cucumber?
+
 !SLIDE countdown
 
 ** 10 **
@@ -118,6 +131,23 @@
 !SLIDE
 
 # Use JavaScript!
+
+!SLIDE code small
+
+    @@@ ruby
+    feature 'Assigning todo item' do
+      scenario 'assigning a todo item to a user' do
+        Capybara.current_driver = :selenium
+        visit('/todos')
+        fill_in('Description', :with => 'Buy milk')
+        click_button('Create')
+
+        within('.task', :text => 'Buy milk') do
+          select('Jonas', :from => 'Assigned')
+          page.should have_content('Assigned to Jonas')
+        end
+      end
+    end
 
 !SLIDE code small
 

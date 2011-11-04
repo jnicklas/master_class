@@ -8,7 +8,7 @@
 
 # More beautiful
 # and well tested
-# JavaScript
+# Ruby and JavaScript
 
 !SLIDE splash
 
