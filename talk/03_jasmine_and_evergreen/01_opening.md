@@ -2,13 +2,10 @@
 
 # Unit Testing JavaScript
 
-!SLIDE
-
-# Now that we have units…
-
 !SLIDE blue
 
-# The best framework: Jasmine
+## The best framework
+# Jasmine
 
 !SLIDE
 
@@ -28,7 +25,8 @@
 
 !SLIDE blue
 
-# Well packaged: Evergreen
+## Well packaged
+# Evergreen
 
 !SLIDE
 
@@ -42,20 +40,16 @@
 
 # Works great with Rails
 
-!SLIDE code
-
-    @@@ruby
-    gem "evergreen", :require => "evergreen/rails"
-
 !SLIDE
 
 # Not tied to Rails
-## Integrates with any Rack framework
-## Works well for testing pure JS
+
+* Integrates with any Rack framework
+* Works well for testing pure JS
 
 !SLIDE
 
-# Nice syntax via
+## Nice syntax via
 # CoffeeScript
 ## (if you want)
 
@@ -72,13 +66,31 @@
 
 # From command line
 
+    $ evergreen run
+
 !SLIDE
 
 # Any Capybara driver
-## Selenium
-## Webkit
-## EnvJS
+
+* Selenium
+* capybara-webkit
+* Celerity
 
 !SLIDE purple
 
-# Demo!
+# Go go go!
+
+!SLIDE
+
+## Check out the client side branch
+
+    @@@sh
+    $ git reset --hard # maybe needed
+    $ git checkout client_side
+
+!SLIDE
+
+## Add Evergreen to Gemfile
+
+    @@@ruby
+    gem 'evergreen', '~>1.0', :require => 'evergreen/rails'

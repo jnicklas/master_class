@@ -1,14 +1,13 @@
 !SLIDE capy6
 
-!SLIDE purple
+&nbsp;
 
-# All code should be beautiful
+!SLIDE
 
-!SLIDE purple
-
-# More beautiful
-# and well tested
-# Ruby and JavaScript
+## Write
+# Beautiful
+# Well tested
+## Ruby and JavaScript
 
 !SLIDE splash
 
@@ -16,7 +15,7 @@
 # Questions?
 
 ### Jonas Nicklas – @jonicklas
-### <http://github.com/elabs/testing_assorted_languages>
+### <http://github.com/jnicklas/master_class>
 ### <http://github.com/jnicklas/capybara>
 ### <http://github.com/jnicklas/evergreen>
 ### <http://github.com/pivotal/jasmine>

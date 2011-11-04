@@ -2,20 +2,20 @@
 
 # Suggestions
 
-!SLIDE purple
+!SLIDE blue
 
 # Write testable code
 
 !SLIDE
 
 # Structure your JS code
-# into functions or objects
+## into functions or objects
 
 !SLIDE
 
 # Separate into files
 
-!SLIDE purple
+!SLIDE blue
 
 # Write good tests
 
@@ -34,12 +34,7 @@
 !SLIDE
 
 # Isolate AJAX
-# to avoid brittle tests
-
-!SLIDE
-
-# Mock AJAX
-## if necessary
+## to avoid brittle tests
 
 !SLIDE
 
@@ -49,9 +44,11 @@
 !SLIDE
 
 # Use integration tests
-# to validate templates
+## to validate templates
 
 !SLIDE
 
-# Simplify your DOM
-# Simplify your templates
+# Simplify!
+
+* Simplify your DOM
+* Simplify your templates
